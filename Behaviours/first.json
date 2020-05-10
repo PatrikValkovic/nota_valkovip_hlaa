@@ -1,0 +1,40 @@
+{
+	"additionalNodes": [],
+	"additionalParameters": {
+		"root": {
+			"height": 108,
+			"width": 216
+		}
+	},
+	"inputs": [],
+	"outputs": [],
+	"properties": {
+		"qlQbamjgz8zGW3tilSRFWNuhHcF6JlES": {
+			"height": 92,
+			"title": "Common.build",
+			"width": 174,
+			"x": 363,
+			"y": 0
+		}
+	},
+	"roles": [ {
+		"categories": [],
+		"name": "Role 0"
+	} ],
+	"root": {
+		"children": [],
+		"id": "qlQbamjgz8zGW3tilSRFWNuhHcF6JlES",
+		"nodeType": "luaCommand",
+		"parameters": [ {
+			"name": "pos",
+			"value": "pos"
+		}, {
+			"name": "building",
+			"value": "\"mex\""
+		}, {
+			"name": "scriptName",
+			"value": "Common.build"
+		} ],
+		"scriptName": "Common.build"
+	}
+}

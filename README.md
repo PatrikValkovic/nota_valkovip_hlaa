@@ -1,29 +1,6 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+Repository for "Human-like Artificial Agents" subject at Faculty of Mathematics and Physics, Charles University (https://gamedev.cuni.cz/study/courses-history/courses-2019-2020/labs-for-human-like-artificial-agents-summer-201920/).
 
-### What is this repository for? ###
-
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
-
-### How do I get set up? ###
-
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+# Sources:
+Sandsail icon made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>.
