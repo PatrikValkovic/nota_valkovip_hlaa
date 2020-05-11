@@ -1,26 +1,5 @@
 {
-	"additionalNodes": [ {
-		"children": [],
-		"id": "8zGPnNNhbnBFjf6Vr8ry9JDbGy7xB0L0",
-		"nodeType": "luaCommand",
-		"parameters": [ {
-			"name": "unit",
-			"value": "tomove[1]"
-		}, {
-			"name": "dir_x",
-			"value": "wind_x"
-		}, {
-			"name": "dir_z",
-			"value": "wind_z"
-		}, {
-			"name": "max_distance",
-			"value": "200"
-		}, {
-			"name": "scriptName",
-			"value": "nota_valkovip_hlaa.MoveUnitInDirection"
-		} ],
-		"scriptName": "nota_valkovip_hlaa.MoveUnitInDirection"
-	} ],
+	"additionalNodes": [],
 	"additionalParameters": {
 		"root": {
 			"height": 88,
@@ -30,90 +9,89 @@
 	"inputs": [],
 	"outputs": [],
 	"properties": {
-		"0ixGHFQaTtvz9AzPOcn2GYkaHZRtnJ6f": {
-			"height": 92,
-			"title": "store z direction",
-			"width": 183,
-			"x": 1065,
-			"y": -89
-		},
-		"2utJuSh3bqi28ruL4M8aSDYGnv8wMpM8": {
-			"height": 60,
+		"7b2jwryG1T1zcF6lkx0bW0rHjqsgBbMn": {
+			"height": 70,
 			"title": "Move units",
 			"width": 150,
-			"x": 766,
-			"y": 178
+			"x": 449,
+			"y": 120
 		},
 		"8zGPnNNhbnBFjf6Vr8ry9JDbGy7xB0L0": {
 			"height": 132,
 			"title": "nota_valkovip_hlaa.MoveUnitInDirection",
 			"width": 335,
-			"x": 1044,
-			"y": 262
+			"x": 664,
+			"y": 193
 		},
 		"E2tRRhl40Dm3VBTWWc17j1rVD85yGuDN": {
 			"height": 60,
 			"title": "Query wind direction",
 			"width": 212,
-			"x": 774,
-			"y": -166
+			"x": 662,
+			"y": 70
 		},
 		"Nro75RS9Xpv6jb8IWhKLrA1u8H4z1EZx": {
 			"height": 60,
 			"title": "sequence",
 			"width": 143,
-			"x": 433,
+			"x": 246,
 			"y": 9
-		},
-		"XqZSryKebE4urYDPllIL11a90sVTWs23": {
-			"height": 94,
-			"title": "Alernative approach",
-			"width": 548,
-			"x": 1041,
-			"y": 167
-		},
-		"Zf6o3xW3EUTuYcrGCNFlLvomaltBSRjA": {
-			"height": 60,
-			"title": "repeat",
-			"width": 131,
-			"x": 249,
-			"y": 8
 		},
 		"cOlRXilvV3KlwzsIK6wQGQt5AeLyqbSc": {
 			"height": 60,
 			"title": "Select unit to move",
 			"width": 202,
-			"x": 767,
-			"y": 46
+			"x": 458,
+			"y": -130
 		},
 		"dJpjodRfBbu2wsuqDg4IysHP7fdwNs0n": {
 			"height": 94,
 			"title": "store wind direction",
 			"width": 308,
-			"x": 1066,
-			"y": -287
+			"x": 927,
+			"y": 22
+		},
+		"ij4HT81XAacJR0dFRIQBMIqEHs0J6R1I": {
+			"height": 54,
+			"title": "failure",
+			"width": 131,
+			"x": 932,
+			"y": 126
 		},
 		"mbu0mrJPyOKssFcdrQWOhnDxEPfU7w6P": {
 			"height": 102,
 			"title": "store",
 			"width": 519,
-			"x": 1028,
-			"y": 31
-		},
-		"neRxWRYrKPHUVc4DppHFQAe9WOti91bD": {
-			"height": 92,
-			"title": "store x direction",
-			"width": 183,
-			"x": 1066,
-			"y": -185
+			"x": 821,
+			"y": -145
 		}
 	},
 	"roles": [ {
-		"categories": [],
+		"categories": [ "nota_valkovip_hlaa.commander_category" ],
 		"name": "Role 0"
 	} ],
 	"root": {
 		"children": [ {
+			"children": [ {
+				"children": [],
+				"id": "mbu0mrJPyOKssFcdrQWOhnDxEPfU7w6P",
+				"nodeType": "luaCommand",
+				"parameters": [ {
+					"name": "var",
+					"value": "tomove"
+				}, {
+					"name": "value",
+					"value": "nota_valkovip_hlaa.GetUnitsOfType(units,'armbcom')"
+				}, {
+					"name": "scriptName",
+					"value": "store"
+				} ],
+				"scriptName": "store"
+			} ],
+			"id": "cOlRXilvV3KlwzsIK6wQGQt5AeLyqbSc",
+			"nodeType": "sequence",
+			"parameters": []
+		}, {
 			"children": [ {
 				"children": [ {
 					"children": [],
@@ -132,85 +110,44 @@
 					"scriptName": "store"
 				}, {
 					"children": [],
-					"id": "neRxWRYrKPHUVc4DppHFQAe9WOti91bD",
-					"nodeType": "luaCommand",
-					"parameters": [ {
-						"name": "var",
-						"value": "wind_x"
-					}, {
-						"name": "value",
-						"value": "wind.x"
-					}, {
-						"name": "scriptName",
-						"value": "store"
-					} ],
-					"scriptName": "store"
-				}, {
-					"children": [],
-					"id": "0ixGHFQaTtvz9AzPOcn2GYkaHZRtnJ6f",
-					"nodeType": "luaCommand",
-					"parameters": [ {
-						"name": "var",
-						"value": "wind_z"
-					}, {
-						"name": "value",
-						"value": "wind.z"
-					}, {
-						"name": "scriptName",
-						"value": "store"
-					} ],
-					"scriptName": "store"
+					"id": "ij4HT81XAacJR0dFRIQBMIqEHs0J6R1I",
+					"nodeType": "failure",
+					"parameters": []
 				} ],
 				"id": "E2tRRhl40Dm3VBTWWc17j1rVD85yGuDN",
 				"nodeType": "sequence",
 				"parameters": []
 			}, {
-				"children": [ {
-					"children": [],
-					"id": "mbu0mrJPyOKssFcdrQWOhnDxEPfU7w6P",
-					"nodeType": "luaCommand",
-					"parameters": [ {
-						"name": "var",
-						"value": "tomove"
-					}, {
-						"name": "value",
-						"value": "nota_valkovip_hlaa.GetUnitsOfType(units,'armbcom')"
-					}, {
-						"name": "scriptName",
-						"value": "store"
-					} ],
-					"scriptName": "store"
+				"children": [],
+				"id": "8zGPnNNhbnBFjf6Vr8ry9JDbGy7xB0L0",
+				"nodeType": "luaCommand",
+				"parameters": [ {
+					"name": "unit",
+					"value": "tomove[1]"
+				}, {
+					"name": "dir_x",
+					"value": "wind.x"
+				}, {
+					"name": "dir_z",
+					"value": "wind.z"
+				}, {
+					"name": "max_distance",
+					"value": "400"
+				}, {
+					"name": "scriptName",
+					"value": "nota_valkovip_hlaa.MoveUnitInDirection"
 				} ],
-				"id": "cOlRXilvV3KlwzsIK6wQGQt5AeLyqbSc",
-				"nodeType": "sequence",
-				"parameters": []
-			}, {
-				"children": [ {
-					"children": [],
-					"id": "XqZSryKebE4urYDPllIL11a90sVTWs23",
-					"nodeType": "luaCommand",
-					"parameters": [ {
-						"name": "var",
-						"value": "_"
-					}, {
-						"name": "value",
-						"value": "nota_valkovip_hlaa.MoveUnitInDirection(tomove[1], wind_x, wind_z, 200)"
-					}, {
-						"name": "scriptName",
-						"value": "store"
-					} ],
-					"scriptName": "store"
-				} ],
-				"id": "2utJuSh3bqi28ruL4M8aSDYGnv8wMpM8",
-				"nodeType": "sequence",
-				"parameters": []
+				"scriptName": "nota_valkovip_hlaa.MoveUnitInDirection"
 			} ],
-			"id": "Nro75RS9Xpv6jb8IWhKLrA1u8H4z1EZx",
-			"nodeType": "sequence",
-			"parameters": []
+			"id": "7b2jwryG1T1zcF6lkx0bW0rHjqsgBbMn",
+			"nodeType": "selector",
+			"parameters": [ {
+				"name": "active",
+				"value": "true"
+			} ]
 		} ],
-		"id": "Zf6o3xW3EUTuYcrGCNFlLvomaltBSRjA",
-		"nodeType": "repeat",
+		"id": "Nro75RS9Xpv6jb8IWhKLrA1u8H4z1EZx",
+		"nodeType": "sequence",
 		"parameters": []
 	}
 }
