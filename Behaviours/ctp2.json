@@ -5,10 +5,10 @@
 		"nodeType": "luaCommand",
 		"parameters": [ {
 			"name": "var",
-			"value": "landscape"
+			"value": "u"
 		}, {
 			"name": "value",
-			"value": "nota_valkovip_hlaa.ScanHeights(128)"
+			"value": "units"
 		}, {
 			"name": "scriptName",
 			"value": "store"
@@ -47,10 +47,10 @@
 		},
 		"RmiwnXeEfK3XzNtiPcMB3DgrEhAElKid": {
 			"height": 94,
-			"title": "Debug store landscape",
+			"title": "Debug",
 			"width": 324,
 			"x": 548,
-			"y": -466
+			"y": -467
 		},
 		"VoeYrYcEth9SEREFgCjQm32QI4Wzm6OJ": {
 			"height": 60,
