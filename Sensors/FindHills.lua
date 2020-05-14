@@ -1,6 +1,6 @@
 local sensorInfo = {
 	name = "FindHills",
-	desc = "Scan the map and returns positions of the hills.",
+	desc = "Find hills (place above `minhillsize`) on the map. Samples terrain using `stepsize`.",
 	author = "PatrikValkovic",
 	date = "2020-05-14",
 	license = "MIT",

@@ -1,5 +1,20 @@
 {
-	"additionalNodes": [],
+	"additionalNodes": [ {
+		"children": [],
+		"id": "RmiwnXeEfK3XzNtiPcMB3DgrEhAElKid",
+		"nodeType": "luaCommand",
+		"parameters": [ {
+			"name": "var",
+			"value": "landscape"
+		}, {
+			"name": "value",
+			"value": "nota_valkovip_hlaa.ScanHeights(128)"
+		}, {
+			"name": "scriptName",
+			"value": "store"
+		} ],
+		"scriptName": "store"
+	} ],
 	"additionalParameters": {
 		"root": {
 			"height": 88,
@@ -9,9 +24,30 @@
 	"inputs": [],
 	"outputs": [],
 	"properties": {
+		"CR57IOkeYskOeh1kOKiJcOuTWQOzL4gF": {
+			"height": 110,
+			"title": "nota_valkovip_hlaa.IndividualMove",
+			"width": 302,
+			"x": 547,
+			"y": -20
+		},
+		"EyDsYqzH0cZ4uCiUavhC4CGwXVn8NL86": {
+			"height": 94,
+			"title": "Split units into groups",
+			"width": 311,
+			"x": 546,
+			"y": -244
+		},
+		"KTs5Bm99P6BOq3LANY4jZ9v6fKGnVp26": {
+			"height": 54,
+			"title": "nota_common.manualMissionEnd",
+			"width": 296,
+			"x": 540,
+			"y": 108
+		},
 		"RmiwnXeEfK3XzNtiPcMB3DgrEhAElKid": {
 			"height": 94,
-			"title": "store",
+			"title": "Debug store landscape",
 			"width": 324,
 			"x": 548,
 			"y": -466
@@ -25,10 +61,17 @@
 		},
 		"n3CSqKIPvIMNZTxAPm4k78dlUvawHSrq": {
 			"height": 94,
-			"title": "store",
+			"title": "Store hills positions",
 			"width": 324,
 			"x": 547,
 			"y": -357
+		},
+		"zFaZYBDqaQFwPpvgycFHScbrlbTUiAy9": {
+			"height": 94,
+			"title": "Attach position to each unit",
+			"width": 475,
+			"x": 548,
+			"y": -133
 		}
 	},
 	"roles": [ {
@@ -37,21 +80,6 @@
 	} ],
 	"root": {
 		"children": [ {
-			"children": [],
-			"id": "RmiwnXeEfK3XzNtiPcMB3DgrEhAElKid",
-			"nodeType": "luaCommand",
-			"parameters": [ {
-				"name": "var",
-				"value": "landscape"
-			}, {
-				"name": "value",
-				"value": "nota_valkovip_hlaa.ScanHeights(128)"
-			}, {
-				"name": "scriptName",
-				"value": "store"
-			} ],
-			"scriptName": "store"
-		}, {
 			"children": [],
 			"id": "n3CSqKIPvIMNZTxAPm4k78dlUvawHSrq",
 			"nodeType": "luaCommand",
@@ -66,6 +94,63 @@
 				"value": "store"
 			} ],
 			"scriptName": "store"
+		}, {
+			"children": [],
+			"id": "EyDsYqzH0cZ4uCiUavhC4CGwXVn8NL86",
+			"nodeType": "luaCommand",
+			"parameters": [ {
+				"name": "var",
+				"value": "groups"
+			}, {
+				"name": "value",
+				"value": "nota_valkovip_hlaa.SplitUnits(#hills)"
+			}, {
+				"name": "scriptName",
+				"value": "store"
+			} ],
+			"scriptName": "store"
+		}, {
+			"children": [],
+			"id": "zFaZYBDqaQFwPpvgycFHScbrlbTUiAy9",
+			"nodeType": "luaCommand",
+			"parameters": [ {
+				"name": "var",
+				"value": "units_positions"
+			}, {
+				"name": "value",
+				"value": "nota_valkovip_hlaa.AggregateUnitsWithPositions(hills,groups)"
+			}, {
+				"name": "scriptName",
+				"value": "store"
+			} ],
+			"scriptName": "store"
+		}, {
+			"children": [],
+			"id": "CR57IOkeYskOeh1kOKiJcOuTWQOzL4gF",
+			"nodeType": "luaCommand",
+			"parameters": [ {
+				"name": "units",
+				"value": "units_positions"
+			}, {
+				"name": "Fail on death immediately",
+				"value": "false"
+			}, {
+				"name": "Fail on death",
+				"value": "false"
+			}, {
+				"name": "scriptName",
+				"value": "nota_valkovip_hlaa.IndividualMove"
+			} ],
+			"scriptName": "nota_valkovip_hlaa.IndividualMove"
+		}, {
+			"children": [],
+			"id": "KTs5Bm99P6BOq3LANY4jZ9v6fKGnVp26",
+			"nodeType": "luaCommand",
+			"parameters": [ {
+				"name": "scriptName",
+				"value": "nota_common.manualMissionEnd"
+			} ],
+			"scriptName": "nota_common.manualMissionEnd"
 		} ],
 		"id": "VoeYrYcEth9SEREFgCjQm32QI4Wzm6OJ",
 		"nodeType": "sequence",
