@@ -1,0 +1,74 @@
+{
+	"additionalNodes": [],
+	"additionalParameters": {
+		"root": {
+			"height": 88,
+			"width": 180
+		}
+	},
+	"inputs": [],
+	"outputs": [],
+	"properties": {
+		"RmiwnXeEfK3XzNtiPcMB3DgrEhAElKid": {
+			"height": 94,
+			"title": "store",
+			"width": 324,
+			"x": 548,
+			"y": -466
+		},
+		"VoeYrYcEth9SEREFgCjQm32QI4Wzm6OJ": {
+			"height": 60,
+			"title": "sequence",
+			"width": 143,
+			"x": 225,
+			"y": 10
+		},
+		"n3CSqKIPvIMNZTxAPm4k78dlUvawHSrq": {
+			"height": 94,
+			"title": "store",
+			"width": 324,
+			"x": 547,
+			"y": -357
+		}
+	},
+	"roles": [ {
+		"categories": [],
+		"name": "Role 0"
+	} ],
+	"root": {
+		"children": [ {
+			"children": [],
+			"id": "RmiwnXeEfK3XzNtiPcMB3DgrEhAElKid",
+			"nodeType": "luaCommand",
+			"parameters": [ {
+				"name": "var",
+				"value": "landscape"
+			}, {
+				"name": "value",
+				"value": "nota_valkovip_hlaa.ScanHeights(128)"
+			}, {
+				"name": "scriptName",
+				"value": "store"
+			} ],
+			"scriptName": "store"
+		}, {
+			"children": [],
+			"id": "n3CSqKIPvIMNZTxAPm4k78dlUvawHSrq",
+			"nodeType": "luaCommand",
+			"parameters": [ {
+				"name": "var",
+				"value": "hills"
+			}, {
+				"name": "value",
+				"value": "nota_valkovip_hlaa.FindHills(190,64)"
+			}, {
+				"name": "scriptName",
+				"value": "store"
+			} ],
+			"scriptName": "store"
+		} ],
+		"id": "VoeYrYcEth9SEREFgCjQm32QI4Wzm6OJ",
+		"nodeType": "sequence",
+		"parameters": []
+	}
+}
