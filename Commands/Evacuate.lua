@@ -20,6 +20,12 @@ function getInfo()
 				componentType = "editBox",
 				defaultValue = "{}",
 			},
+      { 
+				name = "stepsize",
+				variableType = "expression",
+				componentType = "editBox",
+				defaultValue = "128",
+			},
 		}
 	}
 end
@@ -38,6 +44,7 @@ function Run(self, _, parameter)
   local plan = parameter.evacuation_plan
   local safetygrid = parameter.safetygrid
   local area = parameter.evac_area
+  local stepsize = parameter.stepsize
   for evacuator, evacuee in pairs(plan) do
     local isalive = not GetUnitIsDead(evacuator) and not GetUnitIsDead(evacuee)
     if isalive then
@@ -57,7 +64,7 @@ function Run(self, _, parameter)
       
       if self[evacuator].state == 1 then -- should plan for pickup
         local tarx, _, tarz = GetUnitPosition(evacuee)
-        local path = Sensors.ComputeEvacuatePaths(evacuator, tarx, tarz, safetygrid)
+        local path = Sensors.ComputeEvacuatePaths(evacuator, tarx, tarz, safetygrid, stepsize)
         for i = 1, #path do
           local modify = {}
           if i ~= 1 then modify = {"shift"} end
@@ -91,7 +98,7 @@ function Run(self, _, parameter)
 
       
       if self[evacuator].state == 10 then -- carry something, should plan way back
-        local path = Sensors.ComputeEvacuatePaths(evacuator, area.center.x, area.center.z, safetygrid)
+        local path = Sensors.ComputeEvacuatePaths(evacuator, area.center.x, area.center.z, safetygrid, stepsize)
         for i = 1, #path do
           local modify = {}
           if i ~= 1 then modify = {"shift"} end

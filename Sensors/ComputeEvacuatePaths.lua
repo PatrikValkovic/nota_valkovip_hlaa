@@ -137,9 +137,9 @@ end
 local GetUnitPosition = Spring.GetUnitPosition
 local Height = Spring.GetGroundHeight
 
-return function(fromunit, tox, toz, grid)
+return function(fromunit, tox, toz, grid, stepsize)
   local fromx, fromy, fromz = GetUnitPosition(fromunit)  
-  local step = 256
+  local step = stepsize
   local mapX = Game.mapSizeX
   local mapZ = Game.mapSizeZ
   
@@ -198,7 +198,7 @@ return function(fromunit, tox, toz, grid)
         for _, follow in pairs(following) do    -- traverse children
           local isvalid = grid[follow.z] and grid[follow.z][follow.x]
           if isvalid then
-            follow.dist = to_process.dist + 1 - grid[follow.z][follow.x] + 0.001
+            follow.dist = to_process.dist + 1 - grid[follow.z][follow.x] + 0.01
             follow.parent = to_process
             queue:put(follow, follow.dist)
           end
