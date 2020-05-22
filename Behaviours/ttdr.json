@@ -1,5 +1,20 @@
 {
 	"additionalNodes": [ {
+		"children": [],
+		"id": "4OzTWUBGCO7h0lCLzDPmZ73uu4BykOv0",
+		"nodeType": "luaCommand",
+		"parameters": [ {
+			"name": "var",
+			"value": "DEBUG"
+		}, {
+			"name": "value",
+			"value": "nota_valkovip_hlaa.ComputeEvacuatePaths(units[1],2000,700,safety) "
+		}, {
+			"name": "scriptName",
+			"value": "store"
+		} ],
+		"scriptName": "store"
+	}, {
 		"children": [ {
 			"children": [ {
 				"children": [],
@@ -141,6 +156,13 @@
 	} ],
 	"outputs": [],
 	"properties": {
+		"4OzTWUBGCO7h0lCLzDPmZ73uu4BykOv0": {
+			"height": 94,
+			"title": "store",
+			"width": 530,
+			"x": 957,
+			"y": 519
+		},
 		"5X1XCg3cGxgffwZWN8Kozwfx05rI7i6q": {
 			"height": 94,
 			"title": "store",
@@ -154,6 +176,13 @@
 			"width": 290,
 			"x": 1329,
 			"y": 184
+		},
+		"N0kS2qt3oAwrbWtxMg1QvsdpfuNnLYGq": {
+			"height": 54,
+			"title": "success",
+			"width": 132,
+			"x": 1109,
+			"y": 651
 		},
 		"NNsb7Nt8XSYxLxEfo5XXfPARyMk42gvq": {
 			"height": 60,
@@ -186,7 +215,7 @@
 		"Tc41UaTTDTTs46mSQGOISMc3eGc7bnRi": {
 			"height": 94,
 			"title": "store",
-			"width": 316,
+			"width": 344,
 			"x": 441,
 			"y": -140
 		},
@@ -201,8 +230,8 @@
 			"height": 54,
 			"title": "failure",
 			"width": 131,
-			"x": 959,
-			"y": 524
+			"x": 963,
+			"y": 618
 		},
 		"euCDqYBewiQQIr1WBPOGKjuGlChIkWtQ": {
 			"height": 60,
@@ -278,15 +307,15 @@
 			"height": 60,
 			"title": "sequence",
 			"width": 143,
-			"x": 754,
-			"y": 339
+			"x": 767,
+			"y": 580
 		},
 		"sYC6I5DBBeNjYbbb8TM66RZTayWaQEej": {
 			"height": 112,
 			"title": "nota_valkovip_hlaa.Evacuate",
 			"width": 266,
 			"x": 806,
-			"y": 613
+			"y": 715
 		},
 		"vW43qeHq2EKhxD7SOhLY1arlsh60Gdd6": {
 			"height": 94,
@@ -310,7 +339,7 @@
 				"value": "safety"
 			}, {
 				"name": "value",
-				"value": "nota_valkovip_hlaa.ScanSafety(512)"
+				"value": "nota_valkovip_hlaa.ScanSafety(256,800)"
 			}, {
 				"name": "scriptName",
 				"value": "store"
@@ -368,6 +397,11 @@
 						"children": [],
 						"id": "cnguQbhn4e7skJObo37hoNoRbOufvV5G",
 						"nodeType": "failure",
+						"parameters": []
+					}, {
+						"children": [],
+						"id": "N0kS2qt3oAwrbWtxMg1QvsdpfuNnLYGq",
+						"nodeType": "success",
 						"parameters": []
 					} ],
 					"id": "sQenKjMUhmAFupYiPuXZWCjpWnUJGTNP",
