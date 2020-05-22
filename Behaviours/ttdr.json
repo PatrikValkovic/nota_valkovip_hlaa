@@ -1,0 +1,157 @@
+{
+	"additionalNodes": [ {
+		"children": [ {
+			"children": [ {
+				"children": [],
+				"id": "vW43qeHq2EKhxD7SOhLY1arlsh60Gdd6",
+				"nodeType": "luaCommand",
+				"parameters": [ {
+					"name": "var",
+					"value": "debuggrid"
+				}, {
+					"name": "value",
+					"value": "nota_valkovip_hlaa.SafetyGridToDebugLoc(safety)"
+				}, {
+					"name": "scriptName",
+					"value": "store"
+				} ],
+				"scriptName": "store"
+			}, {
+				"children": [],
+				"id": "lz7QEFQfNSUZwb9LUAxfpqfIuhdSPQA9",
+				"nodeType": "luaCommand",
+				"parameters": [ {
+					"name": "locations",
+					"value": "debuggrid"
+				}, {
+					"name": "radius",
+					"value": "10"
+				}, {
+					"name": "ttl",
+					"value": "100"
+				}, {
+					"name": "scriptName",
+					"value": "nota_uhlik_base.debugLocations"
+				} ],
+				"scriptName": "nota_uhlik_base.debugLocations"
+			} ],
+			"id": "YZg6ftftZ0qO7d1iHwpC0CEEAKMqAn10",
+			"nodeType": "sequence",
+			"parameters": []
+		} ],
+		"id": "hk4eGu5ietJgBO4o4GOmXTZ7ntPOmBpp",
+		"nodeType": "repeat",
+		"parameters": []
+	} ],
+	"additionalParameters": {
+		"root": {
+			"height": 88,
+			"width": 180
+		}
+	},
+	"inputs": [],
+	"outputs": [],
+	"properties": {
+		"RKBOfVQ2R0PFGcEy6dgc5bLsiRQERast": {
+			"height": 94,
+			"title": "store",
+			"width": 329,
+			"x": 445,
+			"y": -10
+		},
+		"Tc41UaTTDTTs46mSQGOISMc3eGc7bnRi": {
+			"height": 94,
+			"title": "store",
+			"width": 316,
+			"x": 441,
+			"y": -140
+		},
+		"YZg6ftftZ0qO7d1iHwpC0CEEAKMqAn10": {
+			"height": 60,
+			"title": "sequence",
+			"width": 143,
+			"x": 952,
+			"y": -62
+		},
+		"hk4eGu5ietJgBO4o4GOmXTZ7ntPOmBpp": {
+			"height": 60,
+			"title": "repeat",
+			"width": 131,
+			"x": 766,
+			"y": -61
+		},
+		"kABN5yNr4RBpBziOL54CLoHHTaYC6d4F": {
+			"height": 60,
+			"title": "repeat",
+			"width": 131,
+			"x": 461,
+			"y": 111
+		},
+		"lz7QEFQfNSUZwb9LUAxfpqfIuhdSPQA9": {
+			"height": 112,
+			"title": "nota_uhlik_base.debugLocations",
+			"width": 290,
+			"x": 1155,
+			"y": -22
+		},
+		"oYDAUUbzW34nKisCz6KcOhTufrObWnDI": {
+			"height": 60,
+			"title": "sequence",
+			"width": 143,
+			"x": 263,
+			"y": 10
+		},
+		"vW43qeHq2EKhxD7SOhLY1arlsh60Gdd6": {
+			"height": 94,
+			"title": "store",
+			"width": 408,
+			"x": 1153,
+			"y": -162
+		}
+	},
+	"roles": [ {
+		"categories": [],
+		"name": "Role 1"
+	} ],
+	"root": {
+		"children": [ {
+			"children": [],
+			"id": "Tc41UaTTDTTs46mSQGOISMc3eGc7bnRi",
+			"nodeType": "luaCommand",
+			"parameters": [ {
+				"name": "var",
+				"value": "safety"
+			}, {
+				"name": "value",
+				"value": "nota_valkovip_hlaa.ScanSafety(512)"
+			}, {
+				"name": "scriptName",
+				"value": "store"
+			} ],
+			"scriptName": "store"
+		}, {
+			"children": [],
+			"id": "RKBOfVQ2R0PFGcEy6dgc5bLsiRQERast",
+			"nodeType": "luaCommand",
+			"parameters": [ {
+				"name": "var",
+				"value": "toevacuate"
+			}, {
+				"name": "value",
+				"value": "nota_valkovip_hlaa.UnitsToEvacuate()"
+			}, {
+				"name": "scriptName",
+				"value": "store"
+			} ],
+			"scriptName": "store"
+		}, {
+			"children": [],
+			"id": "kABN5yNr4RBpBziOL54CLoHHTaYC6d4F",
+			"nodeType": "repeat",
+			"parameters": []
+		} ],
+		"id": "oYDAUUbzW34nKisCz6KcOhTufrObWnDI",
+		"nodeType": "sequence",
+		"parameters": []
+	}
+}
