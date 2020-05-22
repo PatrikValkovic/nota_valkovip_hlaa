@@ -10,3 +10,5 @@ Arrow icon made by [Roundicons](https://www.flaticon.com/authors/roundicons) fro
 Hill icon made by [Freepik](https://www.flaticon.com/authors/freepik) from [www.flaticon.com](https://www.flaticon.com/).
 
 Individual move made by [Smashicons](https://smashicons.com/) from [www.flaticon.com](https://www.flaticon.com/).
+
+Evacuate icon made by [Smashicons](https://smashicons.com/) from [www.flaticon.com](https://www.flaticon.com/).
