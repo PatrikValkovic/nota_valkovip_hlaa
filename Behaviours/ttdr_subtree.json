@@ -1,5 +1,20 @@
 {
 	"additionalNodes": [ {
+		"children": [],
+		"id": "PW21WXZQhQnlC6Gj9F71888vtacH8ny4",
+		"nodeType": "luaCommand",
+		"parameters": [ {
+			"name": "var",
+			"value": "DEBUG"
+		}, {
+			"name": "value",
+			"value": "nota_valkovip_hlaa.ComputeEvacuatePaths(units[1],2000,700,safety) "
+		}, {
+			"name": "scriptName",
+			"value": "store"
+		} ],
+		"scriptName": "store"
+	}, {
 		"children": [ {
 			"children": [ {
 				"children": [],
@@ -42,21 +57,6 @@
 		"id": "WM3584RCHvbHoDl8FHgDR9LHIeiOQx2e",
 		"nodeType": "repeat",
 		"parameters": []
-	}, {
-		"children": [],
-		"id": "PW21WXZQhQnlC6Gj9F71888vtacH8ny4",
-		"nodeType": "luaCommand",
-		"parameters": [ {
-			"name": "var",
-			"value": "DEBUG"
-		}, {
-			"name": "value",
-			"value": "nota_valkovip_hlaa.ComputeEvacuatePaths(units[1],2000,700,safety) "
-		}, {
-			"name": "scriptName",
-			"value": "store"
-		} ],
-		"scriptName": "store"
 	}, {
 		"children": [ {
 			"children": [ {
@@ -407,7 +407,7 @@
 						"value": "STEPSIZE"
 					}, {
 						"name": "value",
-						"value": "128"
+						"value": "168"
 					}, {
 						"name": "scriptName",
 						"value": "store"

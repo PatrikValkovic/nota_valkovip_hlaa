@@ -20,30 +20,49 @@ end
 local GetUnitPosition = Spring.GetUnitPosition
 local GetUnitIsDead = Spring.GetUnitIsDead
 
-return function(evacuators, evacuatees)
-  local evacuations = {}
+return function(evacuators_original, evacuatees)
+  local evacu = {}
+  local evacuators = {}
+  for i=1, #evacuators_original do
+    evacuators[i] = evacuators_original[i]
+  end
   
-  for eva_i = 1, #evacuators do
-    local evacuator_unitid = evacuators[eva_i]
-    local isalive = not GetUnitIsDead(evacuator_unitid)
-    if isalive then
-      local x, _, z = GetUnitPosition(evacuator_unitid)
-      local to_evacuate = -1
-      local to_evacuate_distance = math.huge
-      for i = 1, #evacuatees do
-        local evacuatee_unitid = evacuatees[i]
-        local ex, _, ez = GetUnitPosition(evacuatee_unitid)
-        local dist = distance(ex, ez, x, z)
-        if dist < to_evacuate_distance then
-          to_evacuate = i
-          to_evacuate_distance = dist
-        end
-      end
-      if to_evacuate ~= -1 then
-        evacuations[evacuator_unitid] = evacuatees[to_evacuate]
-        table.remove(evacuatees, to_evacuate)
+  local tmp = 0
+  while #evacuators > 0 and tmp < 1000 do
+    tmp = tmp + 1
+    local current_evacuator = evacuators[#evacuators]
+    evacuators[#evacuators] = nil
+    
+    local best_evacuee = -1
+    local best_distance = math.huge
+    
+    for i=1, #evacuatees do
+      local current_evacuee = evacuatees[i]
+      local ex, _, ez = GetUnitPosition(current_evacuee)
+      local rx, _, rz = GetUnitPosition(current_evacuator)
+      local dist = distance(ex, ez, rx, rz)
+      if (not evacu[current_evacuee] and dist < best_distance) or         -- closer to not reserved
+         (evacu[current_evacuee] and dist < evacu[current_evacuee].dist)  -- or closer to somebody else
+      then
+        best_evacuee = current_evacuee
+        best_distance = dist
       end
     end
+    
+    if not evacu[best_evacuee] then
+      evacu[best_evacuee] = {evacuator=current_evacuator, dist=best_distance}
+    elseif evacu[best_evacuee].evacuator ~= current_evacuator then
+      local prev_evacuator = evacu[best_evacuee].evacuator
+      evacu[best_evacuee].evacuator = current_evacuator
+      evacu[best_evacuee].dist = best_distance
+      evacuators[#evacuators + 1] = prev_evacuator
+    end
+    
+  end
+
+  local evacuations = {}
+  for evacuee, evatable in pairs(evacu) do
+    evacuations[evatable.evacuator] = evacuee 
   end
   
   return evacuations
